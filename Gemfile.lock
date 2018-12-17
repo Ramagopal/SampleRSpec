@@ -3,47 +3,62 @@ GEM
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    capybara (2.16.1)
+    allure-rspec (0.8.0)
+      allure-ruby-adaptor-api (= 0.7.0)
+      rspec (~> 3.5)
+    allure-ruby-adaptor-api (0.7.0)
+      mimemagic
+      nokogiri (~> 1.7)
+      uuid
+    capybara (3.1.0)
       addressable
       mini_mime (>= 0.1.3)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      xpath (~> 2.0)
-    childprocess (0.8.0)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      xpath (~> 3.0)
+    childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     chunky_png (1.3.6)
     diff-lcs (1.3)
-    eyes_core (3.13.0)
+    eyes_core (3.14.3)
       chunky_png (= 1.3.6)
       faraday
       oily_png (~> 1.2)
       oj
-    eyes_selenium (3.13.0)
+    eyes_selenium (3.14.3)
       capybara
-      eyes_core (= 3.13.0)
+      eyes_core (= 3.14.3)
       selenium-webdriver
       watir
-    faraday (0.13.1)
+    faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.18)
+    ffi (1.9.25)
+    macaddr (1.7.1)
+      systemu (~> 2.6.2)
+    mimemagic (0.3.2)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     multipart-post (2.0.0)
-    nokogiri (1.8.1)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.2-x64-mingw32)
+      mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.2-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
-    oj (3.3.9)
-    public_suffix (3.0.1)
-    rack (2.0.3)
-    rack-test (0.8.2)
+    oj (3.7.4)
+    public_suffix (3.0.2)
+    rack (2.0.5)
+    rack-test (1.0.0)
       rack (>= 1.0, < 3)
+    regexp_parser (1.3.0)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
       rspec-mocks (~> 3.7.0)
-    rspec-core (3.7.0)
+    rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -51,23 +66,30 @@ GEM
     rspec-mocks (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
-    rspec-support (3.7.0)
-    rubyzip (1.2.1)
-    selenium-webdriver (3.7.0)
+    rspec-support (3.7.1)
+    rubyzip (1.2.2)
+    selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
-      rubyzip (~> 1.0)
-    watir (6.10.0)
-      selenium-webdriver (~> 3.4, >= 3.4.1)
-    xpath (2.1.0)
-      nokogiri (~> 1.3)
+      rubyzip (~> 1.2, >= 1.2.2)
+    systemu (2.6.5)
+    uuid (2.3.9)
+      macaddr (~> 1.0)
+    watir (6.16.0)
+      regexp_parser (~> 1.2)
+      selenium-webdriver (~> 3.6)
+    xpath (3.0.0)
+      nokogiri (~> 1.8)
 
 PLATFORMS
   ruby
+  x64-mingw32
+  x86-mingw32
 
 DEPENDENCIES
+  allure-rspec
   capybara
   eyes_selenium
   rspec
 
 BUNDLED WITH
-   1.15.4
+   1.17.1
