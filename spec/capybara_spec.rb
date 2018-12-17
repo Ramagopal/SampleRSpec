@@ -1,9 +1,17 @@
+require 'allure-rspec'
 require 'rspec'
 require 'capybara/rspec'
 require  'eyes_selenium'
 require 'applitools/capybara'
 
 Applitools.register_capybara_driver :browser => :chrome
+
+AllureRSpec.configure do |allureconfig|
+  allureconfig.output_dir = 'tmp/screenshots'
+  allureconfig.clean_dir = true # this is the default value
+  allureconfig.logging_level = Logger::ERROR
+
+end
 
 describe 'Full page example (scrolling)', :type => :feature, :js => true do
   let(:eyes) do
